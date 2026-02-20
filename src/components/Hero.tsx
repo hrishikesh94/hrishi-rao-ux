@@ -9,8 +9,7 @@ export default function Hero() {
         <div className="w-12 h-px bg-accent mb-12" />
 
         <h1 className="font-display text-6xl md:text-8xl text-foreground leading-none tracking-tight mb-8">
-          Hrishi<br />
-          <span className="italic text-muted-foreground">Rao</span>
+          Hrishi Rao
         </h1>
 
         <div className="max-w-xl ml-1">
