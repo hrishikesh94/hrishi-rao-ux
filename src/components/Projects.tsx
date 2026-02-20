@@ -1,6 +1,7 @@
+import { Timeline, TimelineItem } from "./ui/timeline";
+
 const projects = [
   {
-    number: "01",
     title: "Screen Reader Navigation Patterns",
     tags: ["Accessibility", "Usability Study", "Assistive Tech"],
     description:
@@ -8,7 +9,6 @@ const projects = [
     year: "2024",
   },
   {
-    number: "02",
     title: "Co-designing AAC Interfaces with Non-speaking Adults",
     tags: ["Participatory Research", "AAC", "Co-design"],
     description:
@@ -16,7 +16,6 @@ const projects = [
     year: "2023",
   },
   {
-    number: "03",
     title: "Longitudinal Diary Study: AT Adoption in the Workplace",
     tags: ["Diary Study", "Workplace", "Longitudinal"],
     description:
@@ -24,7 +23,6 @@ const projects = [
     year: "2023",
   },
   {
-    number: "04",
     title: "Cognitive Load in Accessible Data Visualisation",
     tags: ["Cognitive Research", "Data Viz", "Quantitative"],
     description:
@@ -51,55 +49,37 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="space-y-0">
-          {projects.map((project, i) => (
-            <article
-              key={project.number}
-              tabIndex={0}
-              role="article"
-              aria-label={`${project.title}, ${project.year}`}
-              className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-10 border-t border-border group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-background focus-visible:ring-foreground rounded-sm ${
-                i === projects.length - 1 ? "border-b" : ""
-              }`}
-            >
-              {/* Number + Year */}
-              <div className="md:col-span-3 flex md:flex-col justify-between md:justify-start md:gap-2">
-                <span className="font-body text-xs text-muted-foreground tracking-widest">
-                  {project.number}
-                </span>
-                <span className="font-body text-xs text-muted-foreground">
-                  {project.year}
-                </span>
-              </div>
-
-              {/* Title + description */}
-              <div className="md:col-span-7">
-                <h3 className="font-display text-xl md:text-2xl text-foreground mb-3 group-hover:text-accent-color group-focus-visible:text-accent-color transition-colors leading-snug">
-                  {project.title}
-                </h3>
-                <p className="font-body text-sm text-muted-foreground font-light leading-relaxed mb-4">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-body text-xs text-accent-color tracking-wide"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Arrow */}
-              <div className="md:col-span-2 flex items-start justify-end">
-                <span className="text-muted-foreground group-hover:text-accent-color group-focus-visible:text-accent-color group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-all duration-200 text-lg" aria-hidden="true">
-                  →
-                </span>
-              </div>
-            </article>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div className="md:col-span-3" />
+          <div className="md:col-span-9">
+            <Timeline aria-label="Research projects timeline">
+              {projects.map((project, i) => (
+                <TimelineItem
+                  key={project.title}
+                  year={project.year}
+                  aria-label={`${project.title}, ${project.year}`}
+                  isLast={i === projects.length - 1}
+                >
+                  <h3 className="font-display text-xl md:text-2xl text-foreground mb-3 group-hover:text-accent-color group-focus-visible:text-accent-color transition-colors leading-snug">
+                    {project.title}
+                  </h3>
+                  <p className="font-body text-sm text-muted-foreground font-light leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="font-body text-xs text-accent-color tracking-wide border border-accent-foreground/30 px-2.5 py-1 rounded-none"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </TimelineItem>
+              ))}
+            </Timeline>
+          </div>
         </div>
       </div>
     </section>

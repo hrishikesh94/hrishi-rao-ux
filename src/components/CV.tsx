@@ -1,3 +1,6 @@
+import type { ReactNode } from "react";
+import { Timeline, TimelineItem } from "./ui/timeline";
+
 const experience = [
   {
     role: "Founding UX Researcher",
@@ -50,15 +53,39 @@ const education = [
 ];
 
 const publications = [
-  "Pandey, M., Bondre, S., Rao, H.V., O'Modhrain, S., & Oney, S. (2024). UI Development Experiences of Programmers with Visual Impairments in Product Teams. Equity, Diversity, and Inclusion in Software Engineering.",
-  "Fan, D., Siu, A.F., Rao, H.V., Kim, G.S.-H., Vazquez, X., Greco, L., O'Modhrain, S., & Follmer, S. (2023). The Accessibility of Data Visualizations on the Web for Screen Reader Users: Practices and Experiences During COVID-19. ACM Transactions on Accessible Computing.",
-  "Rao, H.V. & O'Modhrain, S. (2022). Designing Interactive Audio-Tactile Charts Grounded in Current Practices of Tactile Graphics Production. ACM DIS '22.",
-  "Pandey, M., Kameswaran, V., Rao, H.V., O'Modhrain, S., & Oney, S. (2021). Understanding Accessibility and Collaboration in Programming for People with Visual Impairments. Proc. ACM Hum.-Comput. Interact. (CSCW).",
-  "Siu, A.F., Fan, D., Rao, H.V., Kim, G.S.-H., Vazquez, X., O'Modhrain, S., & Follmer, S. (2021). COVID-19 Highlights the Issues Facing Blind and Visually Impaired People in Accessing Data on the Web. W4A '21.",
-  "Rao, H.V. & O'Modhrain, S. (2020). 2Across: A Comparison of Audio-Tactile and Screen-Reader Based Representations of a Crossword Puzzle. ACM CHI '20.",
+  {
+    citation:
+      "Pandey, M., Bondre, S., Rao, H.V., O'Modhrain, S., & Oney, S. (2024). UI Development Experiences of Programmers with Visual Impairments in Product Teams. Equity, Diversity, and Inclusion in Software Engineering.",
+    year: "2024",
+  },
+  {
+    citation:
+      "Fan, D., Siu, A.F., Rao, H.V., Kim, G.S.-H., Vazquez, X., Greco, L., O'Modhrain, S., & Follmer, S. (2023). The Accessibility of Data Visualizations on the Web for Screen Reader Users: Practices and Experiences During COVID-19. ACM Transactions on Accessible Computing.",
+    year: "2023",
+  },
+  {
+    citation:
+      "Rao, H.V. & O'Modhrain, S. (2022). Designing Interactive Audio-Tactile Charts Grounded in Current Practices of Tactile Graphics Production. ACM DIS '22.",
+    year: "2022",
+  },
+  {
+    citation:
+      "Pandey, M., Kameswaran, V., Rao, H.V., O'Modhrain, S., & Oney, S. (2021). Understanding Accessibility and Collaboration in Programming for People with Visual Impairments. Proc. ACM Hum.-Comput. Interact. (CSCW).",
+    year: "2021",
+  },
+  {
+    citation:
+      "Siu, A.F., Fan, D., Rao, H.V., Kim, G.S.-H., Vazquez, X., O'Modhrain, S., & Follmer, S. (2021). COVID-19 Highlights the Issues Facing Blind and Visually Impaired People in Accessing Data on the Web. W4A '21.",
+    year: "2021",
+  },
+  {
+    citation:
+      "Rao, H.V. & O'Modhrain, S. (2020). 2Across: A Comparison of Audio-Tactile and Screen-Reader Based Representations of a Crossword Puzzle. ACM CHI '20.",
+    year: "2020",
+  },
 ];
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-t border-border">
       <div className="md:col-span-3">
@@ -98,58 +125,65 @@ export default function CV() {
 
         {/* Experience */}
         <Section title="Experience">
-          <div className="space-y-10">
-            {experience.map((exp) => (
-              <div key={exp.role + exp.org}>
-                <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2 gap-1">
-                  <h3 className="font-display text-xl text-foreground">
-                    {exp.role}
-                  </h3>
-                  <span className="font-body text-xs text-muted-foreground tracking-wide">
-                    {exp.period}
-                  </span>
-                </div>
+          <Timeline aria-label="Work experience timeline">
+            {experience.map((exp, i) => (
+              <TimelineItem
+                key={exp.role + exp.org}
+                year={exp.period}
+                aria-label={`${exp.role} at ${exp.org}, ${exp.period}`}
+                isLast={i === experience.length - 1}
+              >
+                <h3 className="font-display text-xl text-foreground group-hover:text-accent-color group-focus-visible:text-accent-color transition-colors">
+                  {exp.role}
+                </h3>
                 <p className="font-body text-sm text-accent-color mb-2 tracking-wide">
                   {exp.org}
                 </p>
                 <p className="font-body text-sm text-muted-foreground font-light leading-relaxed">
                   {exp.desc}
                 </p>
-              </div>
+              </TimelineItem>
             ))}
-          </div>
+          </Timeline>
         </Section>
 
         {/* Education */}
         <Section title="Education">
-          <div className="space-y-6">
-            {education.map((edu) => (
-              <div key={edu.degree} className="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
-                <div>
-                  <h3 className="font-display text-lg text-foreground">
-                    {edu.degree}
-                  </h3>
-                  <p className="font-body text-sm text-muted-foreground font-light">
-                    {edu.school}
-                  </p>
-                </div>
-                <span className="font-body text-xs text-muted-foreground">
-                  {edu.year}
-                </span>
-              </div>
+          <Timeline aria-label="Education timeline">
+            {education.map((edu, i) => (
+              <TimelineItem
+                key={edu.degree}
+                year={edu.year}
+                aria-label={`${edu.degree} from ${edu.school}, ${edu.year}`}
+                isLast={i === education.length - 1}
+              >
+                <h3 className="font-display text-lg text-foreground group-hover:text-accent-color group-focus-visible:text-accent-color transition-colors">
+                  {edu.degree}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground font-light">
+                  {edu.school}
+                </p>
+              </TimelineItem>
             ))}
-          </div>
+          </Timeline>
         </Section>
 
         {/* Publications */}
         <Section title="Publications">
-          <ul className="space-y-4">
-            {publications.map((pub) => (
-              <li key={pub} className="font-body text-sm text-muted-foreground font-light leading-relaxed pl-4 border-l border-border">
-                {pub}
-              </li>
+          <Timeline aria-label="Publications timeline">
+            {publications.map((pub, i) => (
+              <TimelineItem
+                key={pub.citation}
+                year={pub.year}
+                aria-label={`Publication: ${pub.citation}`}
+                isLast={i === publications.length - 1}
+              >
+                <p className="font-body text-sm text-muted-foreground font-light leading-relaxed">
+                  {pub.citation}
+                </p>
+              </TimelineItem>
             ))}
-          </ul>
+          </Timeline>
         </Section>
       </div>
     </section>
