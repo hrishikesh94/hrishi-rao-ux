@@ -2,32 +2,39 @@ import { Timeline, TimelineItem } from "./ui/timeline";
 
 const projects = [
   {
-    title: "Screen Reader Navigation Patterns",
-    tags: ["Accessibility", "Usability Study", "Assistive Tech"],
+    title: "Grounded Product Features Pipeline",
+    tags: ["Digital Ethnography", "Text Mining"],
     description:
-      "A mixed-methods investigation into how screen reader users navigate complex web applications, combining think-aloud protocols with interaction logging to surface systemic friction points.",
+      "AI-enhanced thematic analysis to systematically process and interpret screen reader forum messages, using hybrid qualitative and quantitative approaches with SQL databases and Model Context Protocol servers.",
+    year: "2025",
+  },
+  {
+    title: "Design Systems for Braille Based UIs",
+    tags: ["User Testing", "Product Management"],
+    description:
+      "Created rapid prototyping tools evaluating icons and UI elements for a Braille User Interface design system. Testing showed the BUI accelerated the onboarding process for new users transitioning to multi-line interfaces.",
     year: "2024",
   },
   {
-    title: "Co-designing AAC Interfaces with Non-speaking Adults",
-    tags: ["Participatory Research", "AAC", "Co-design"],
+    title: "Meta Privacy Center Redesign",
+    tags: ["Mixed-Methods Study"],
     description:
-      "A participatory design study conducted with non-speaking adults and their support networks to understand how augmentative and alternative communication tools could better reflect user agency and identity.",
-    year: "2023",
-  },
-  {
-    title: "Longitudinal Diary Study: AT Adoption in the Workplace",
-    tags: ["Diary Study", "Workplace", "Longitudinal"],
-    description:
-      "An eight-week diary study tracking how employees with disabilities adopt and adapt assistive technologies in professional environments, identifying barriers at the intersection of technology, policy, and culture.",
-    year: "2023",
-  },
-  {
-    title: "Cognitive Load in Accessible Data Visualisation",
-    tags: ["Cognitive Research", "Data Viz", "Quantitative"],
-    description:
-      "An experimental study examining how different accessible chart formats affect cognitive load and data comprehension for users with visual impairments, contributing to evidence-based design guidelines.",
+      "Conducted generative research on data access and privacy management across Meta products using design probe based user studies combining card sorting and interviews, resulting in Privacy Center control changes across Instagram, WhatsApp, and Messenger.",
     year: "2022",
+  },
+  {
+    title: "Co-Designing Audio-Tactile Graphics",
+    tags: ["Co-Design Workshop", "Focus Group"],
+    description:
+      "Facilitated intensive co-design sessions with educators to explore adoption of tactile graphic tablets with audio labels, examining workflow challenges in school-based production environments.",
+    year: "2022",
+  },
+  {
+    title: "Audio-Tactile Tablets in Inclusive Classrooms",
+    tags: ["Field Deployment", "Mixed Methods Study"],
+    description:
+      "Conducted year-long deployment study investigating teacher adoption and pedagogical approaches through contextual interviews and longitudinal surveys, transforming accessibility design practices.",
+    year: "2023",
   },
 ];
 
