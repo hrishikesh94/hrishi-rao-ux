@@ -14,13 +14,13 @@ export default function Hero() {
 
         <div className="max-w-xl ml-1">
           <p className="font-body text-lg md:text-xl text-foreground font-light leading-relaxed mb-6">
-            UX Researcher at an assistive technology company, with a PhD in Human-Computer
-            Interaction & Accessibility.
+            A seasoned UX researcher specializing in accessibility and device UX
+            research, currently driving innovation at NewHaptics.
           </p>
           <p className="font-body text-base text-muted-foreground font-light leading-relaxed">
-            Over 6 years of experience conducting mixed-methods UX research
-            across academic and industry settings — working at the intersection
-            of inclusive design, emerging technology, and human need.
+            Bridging the gap between complex technical challenges and
+            human-centered solutions — making cutting-edge technology more
+            accessible to all users.
           </p>
         </div>
 

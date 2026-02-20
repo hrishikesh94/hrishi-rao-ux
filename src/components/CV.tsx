@@ -1,53 +1,61 @@
 const experience = [
   {
+    role: "Founding UX Researcher",
+    org: "NewHaptics",
+    period: "Jan 2024 — Present",
+    desc: "Developing next-generation braille interfaces utilizing multi-modal information design approaches. Creating and validating design systems for braille user interfaces and building custom rapid prototyping tools.",
+  },
+  {
     role: "UX Researcher",
-    org: "Assistive Technology Company",
-    period: "2022 — Present",
-    desc: "Leading end-to-end mixed-methods research programmes to inform product strategy and inclusive design. Collaborating with cross-functional teams across engineering, design, and policy.",
+    org: "Meta",
+    period: "May 2022 — Aug 2022",
+    desc: "Focused on privacy-related customer experience initiatives, including generative research, card sorting, and interviews to redesign the Meta Privacy Center across Instagram, WhatsApp, and Messenger.",
   },
   {
-    role: "Postdoctoral Researcher",
-    org: "University Research Lab",
-    period: "2021 — 2022",
-    desc: "Conducted research on accessible interfaces and co-design methodologies with disabled communities. Published in top-tier HCI venues.",
+    role: "Visiting Researcher",
+    org: "Smith-Kettlewell Eye Research Institute",
+    period: "May 2019 — Aug 2019",
+    desc: "Developed multi-sensory approaches for representing tactile graphics and data visualizations for visually impaired users.",
   },
   {
-    role: "PhD Researcher",
-    org: "HCI & Accessibility Lab",
-    period: "2017 — 2021",
-    desc: "Doctoral research at the intersection of Human-Computer Interaction and accessibility. Thesis focused on participatory design methods for assistive technology.",
+    role: "UX Research Specialist",
+    org: "IBM Research",
+    period: "May 2017 — Aug 2017",
+    desc: "Contributed to the Data for Social Good initiative, applying UX research methods to socially impactful projects.",
   },
   {
-    role: "Research Assistant",
-    org: "Human Factors Lab",
-    period: "2016 — 2017",
-    desc: "Supported usability studies and user interviews for academic and industry-facing research projects.",
+    role: "Design Researcher",
+    org: "Cisco",
+    period: "Jan 2016 — Jul 2016",
+    desc: "Conducted design research to inform product decisions and improve user experiences.",
   },
 ];
 
 const education = [
   {
-    degree: "PhD, Human-Computer Interaction & Accessibility",
-    school: "University",
-    year: "2021",
+    degree: "PhD, Accessibility & Human-Computer Interaction",
+    school: "University of Michigan",
+    year: "2024",
   },
   {
-    degree: "MSc, Human-Computer Interaction",
-    school: "University",
-    year: "2016",
+    degree: "MSI, Human-Computer Interaction",
+    school: "University of Michigan",
+    year: "2019",
   },
   {
-    degree: "BEng, Computer Science",
-    school: "University",
+    degree: "B.Tech, Mechatronics Engineering",
+    school: "Manipal University",
     year: "2015",
   },
 ];
 
 const publications = [
-  "Rao, H. et al. (2024). Understanding Screen Reader Navigation in Complex Web Applications. CHI '24.",
-  "Rao, H. & Collaborators (2023). Co-designing AAC Interfaces: A Participatory Approach. ASSETS '23.",
-  "Rao, H. et al. (2022). Workplace AT Adoption: A Longitudinal Diary Study. CSCW '22.",
-  "Rao, H. (2021). Participatory Design in Assistive Technology: Methods and Ethics. PhD Thesis.",
+  "Pandey, M., Bondre, S., Rao, H.V., O'Modhrain, S., & Oney, S. (2024). UI Development Experiences of Programmers with Visual Impairments in Product Teams. Equity, Diversity, and Inclusion in Software Engineering.",
+  "Fan, D., Siu, A.F., Rao, H.V., Kim, G.S.-H., Vazquez, X., Greco, L., O'Modhrain, S., & Follmer, S. (2023). The Accessibility of Data Visualizations on the Web for Screen Reader Users: Practices and Experiences During COVID-19. ACM Transactions on Accessible Computing.",
+  "Rao, H.V. & O'Modhrain, S. (2022). Designing Interactive Audio-Tactile Charts Grounded in Current Practices of Tactile Graphics Production. ACM DIS '22.",
+  "Pandey, M., Kameswaran, V., Rao, H.V., O'Modhrain, S., & Oney, S. (2021). Understanding Accessibility and Collaboration in Programming for People with Visual Impairments. Proc. ACM Hum.-Comput. Interact. (CSCW).",
+  "Siu, A.F., Fan, D., Rao, H.V., Kim, G.S.-H., Vazquez, X., O'Modhrain, S., & Follmer, S. (2021). COVID-19 Highlights the Issues Facing Blind and Visually Impaired People in Accessing Data on the Web. W4A '21.",
+  "Rao, H.V. & O'Modhrain, S. (2020). 2Across: A Comparison of Audio-Tactile and Screen-Reader Based Representations of a Crossword Puzzle. ACM CHI '20.",
 ];
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {

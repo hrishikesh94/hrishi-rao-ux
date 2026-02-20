@@ -32,22 +32,23 @@ export default function About() {
 
             <div className="space-y-5 max-w-2xl">
               <p className="font-body text-base text-foreground font-light leading-relaxed">
-                I am a UX researcher specialising in accessibility and assistive technology.
-                My work bridges the gap between lived disability experiences and the
-                design decisions that shape technology — ensuring that products are not
-                just functional, but genuinely inclusive.
+                I am a UX researcher specializing in accessibility and device UX
+                research, currently part of the founding team at NewHaptics. My work
+                involves creating and validating design systems for braille user
+                interfaces and developing custom rapid prototyping tools for Codex — a
+                multiline braille display powered by bespoke microfluidic technology.
               </p>
               <p className="font-body text-base text-muted-foreground font-light leading-relaxed">
-                My PhD at the intersection of HCI and accessibility gave me a strong
-                foundation in both qualitative and quantitative methods. Since then, I
-                have applied this expertise in industry — leading end-to-end research
-                programmes, facilitating cross-functional collaboration, and translating
-                complex human insights into actionable design direction.
+                My PhD at the University of Michigan in Accessibility & Human-Computer
+                Interaction gave me a strong foundation in both qualitative and
+                quantitative methods. I have led numerous end-to-end mixed-method UX
+                research projects that have directly influenced product development —
+                from field deployments to generative research and co-design workshops.
               </p>
               <p className="font-body text-base text-muted-foreground font-light leading-relaxed">
-                I am particularly passionate about participatory research methods and
-                the role of co-design in building technology that truly works for
-                everyone.
+                I am passionate about bridging the gap between complex technical
+                challenges and human-centered solutions, making cutting-edge technology
+                more accessible to all users.
               </p>
             </div>
 

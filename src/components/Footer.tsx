@@ -11,20 +11,33 @@ export default function Footer() {
           </p>
         </div>
         <div className="md:col-span-3 flex flex-wrap gap-5 md:justify-end">
-          {["LinkedIn", "Google Scholar", "Email"].map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground transition-colors"
-            >
-              {link}
-            </a>
-          ))}
+          <a
+            href="https://www.linkedin.com/in/hrishikeshrao/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground transition-colors"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=ljPCw_oAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground transition-colors"
+          >
+            Google Scholar
+          </a>
+          <a
+            href="mailto:hrishikeshrao94@gmail.com"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground transition-colors"
+          >
+            Email
+          </a>
         </div>
       </div>
       <div className="max-w-5xl mx-auto mt-10 pt-6 border-t border-border flex justify-between items-center">
         <span className="font-body text-xs text-muted-foreground">
-          © 2025 Hrishi Rao
+          © 2026 Hrishi Rao
         </span>
         <span className="font-body text-xs text-muted-foreground">
           Built with care
