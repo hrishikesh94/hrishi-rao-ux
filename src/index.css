@@ -158,11 +158,11 @@
   }
 
   .text-accent-color {
-    color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
   }
 
   .border-accent-color {
-    border-color: hsl(var(--accent));
+    border-color: hsl(var(--accent-foreground));
   }
 
   .underline-grow {
@@ -177,7 +177,7 @@
     left: 0;
     width: 0;
     height: 1px;
-    background: hsl(var(--accent));
+    background: hsl(var(--accent-foreground));
     transition: width 0.3s ease;
   }
 

@@ -15,7 +15,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/hrishikeshrao/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground transition-colors"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground focus-visible:text-foreground transition-colors outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
           >
             LinkedIn
           </a>
@@ -23,13 +23,13 @@ export default function Footer() {
             href="https://scholar.google.com/citations?user=ljPCw_oAAAAJ&hl=en"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground transition-colors"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground focus-visible:text-foreground transition-colors outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
           >
             Google Scholar
           </a>
           <a
             href="mailto:hrishikeshrao94@gmail.com"
-            className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground transition-colors"
+            className="font-body text-xs tracking-widest uppercase text-muted-foreground underline-grow hover:text-foreground focus-visible:text-foreground transition-colors outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
           >
             Email
           </a>

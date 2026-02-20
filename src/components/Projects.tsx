@@ -55,7 +55,10 @@ export default function Projects() {
           {projects.map((project, i) => (
             <article
               key={project.number}
-              className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-10 border-t border-border group cursor-pointer ${
+              tabIndex={0}
+              role="article"
+              aria-label={`${project.title}, ${project.year}`}
+              className={`grid grid-cols-1 md:grid-cols-12 gap-8 py-10 border-t border-border group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-offset-background focus-visible:ring-foreground rounded-sm ${
                 i === projects.length - 1 ? "border-b" : ""
               }`}
             >
@@ -71,7 +74,7 @@ export default function Projects() {
 
               {/* Title + description */}
               <div className="md:col-span-7">
-                <h3 className="font-display text-xl md:text-2xl text-foreground mb-3 group-hover:text-accent-color transition-colors leading-snug">
+                <h3 className="font-display text-xl md:text-2xl text-foreground mb-3 group-hover:text-accent-color group-focus-visible:text-accent-color transition-colors leading-snug">
                   {project.title}
                 </h3>
                 <p className="font-body text-sm text-muted-foreground font-light leading-relaxed mb-4">
@@ -91,7 +94,7 @@ export default function Projects() {
 
               {/* Arrow */}
               <div className="md:col-span-2 flex items-start justify-end">
-                <span className="text-muted-foreground group-hover:text-accent-color group-hover:translate-x-1 transition-all duration-200 text-lg">
+                <span className="text-muted-foreground group-hover:text-accent-color group-focus-visible:text-accent-color group-hover:translate-x-1 group-focus-visible:translate-x-1 transition-all duration-200 text-lg" aria-hidden="true">
                   →
                 </span>
               </div>

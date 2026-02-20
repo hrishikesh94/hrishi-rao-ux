@@ -27,13 +27,13 @@ export default function Hero() {
         <div className="mt-16 flex gap-6">
           <a
             href="#projects"
-            className="font-body text-sm tracking-widest uppercase text-foreground border-b border-foreground pb-0.5 hover:text-accent-color hover:border-accent-color transition-colors"
+            className="font-body text-sm tracking-widest uppercase text-foreground border-b border-foreground pb-0.5 hover:text-accent-color hover:border-accent-color focus-visible:text-accent-color focus-visible:border-accent-color transition-colors outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
           >
             View Work
           </a>
           <a
             href="#about"
-            className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors underline-grow"
+            className="font-body text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground focus-visible:text-foreground transition-colors underline-grow outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
           >
             About Me
           </a>

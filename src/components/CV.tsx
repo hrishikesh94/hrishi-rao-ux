@@ -89,7 +89,7 @@ export default function CV() {
             </h2>
             <a
               href="#"
-              className="font-body text-sm tracking-widest uppercase text-foreground border-b border-foreground pb-0.5 hover:text-accent-color hover:border-accent-color transition-colors"
+              className="font-body text-sm tracking-widest uppercase text-foreground border-b border-foreground pb-0.5 hover:text-accent-color hover:border-accent-color focus-visible:text-accent-color focus-visible:border-accent-color transition-colors outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
             >
               Download PDF
             </a>

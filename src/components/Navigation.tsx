@@ -44,7 +44,7 @@ export default function Navigation() {
       <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
         <a
           href="#"
-          className="font-display text-base tracking-wide text-foreground hover:text-accent-color transition-colors"
+          className="font-display text-base tracking-wide text-foreground hover:text-accent-color focus-visible:text-accent-color transition-colors outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
         >
           HR
         </a>
@@ -53,10 +53,10 @@ export default function Navigation() {
             <li key={label}>
               <a
                 href={href}
-                className={`font-body text-sm font-light tracking-widest uppercase underline-grow transition-colors ${
+                className={`font-body text-sm font-light tracking-widest uppercase underline-grow transition-colors outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm ${
                   activeSection === href.slice(1)
                     ? "text-accent-color"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground focus-visible:text-foreground"
                 }`}
               >
                 {label}
